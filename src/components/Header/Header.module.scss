@@ -1,0 +1,119 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+
+
+.header {
+  width: 100%;
+  font-family: $font-family-main;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+
+  .header__content {
+    padding: $spacing-sm $spacing-md 7px $spacing-md;
+    @include flex-align-center;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-border-input;
+  }
+
+  &__left {
+    @include flex-align-center;
+    }
+    &__logo {
+      max-height: $spacing-xl - $spacing-sm;
+      max-width: 174px;
+      object-fit: contain;
+
+      @include md {
+        content: url('../../assets/Sidebar.svg')
+      }
+  }
+
+  &__right {
+    @include flex-align-center;
+    gap: $spacing-md;
+  }
+
+  &__user-group {
+    @include flex-align-center;
+    gap: $spacing-sm;
+  }
+}
+
+.search {
+  position: relative;
+  @include flex-align-center;
+
+  @include md {
+    display: none;
+  }
+
+  &__input {
+    width: 296px;
+    height: $spacing-xl;
+    padding-left: $spacing-sm;
+    background: $color-background-input;
+    border: 1px solid $color-border-input;
+    border-radius: calc($border-radius-md / 2);
+    font-size: $font-size-sm;
+    font-family: $font-family-main;
+    outline: none;
+  }
+
+  &__button {
+    position: absolute;
+    right: $spacing-sm;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    @include flex-center;
+
+    img {
+      width: $spacing-md;
+      height: $spacing-md;
+    }
+  }
+}
+
+.user {
+  @include flex-align-center;
+  gap: $spacing-sm;
+  padding-right: $spacing-xs + 2px;
+
+  @include md {
+    gap: $spacing-md;
+  }
+
+  &__name {
+    color: $color-text;
+    letter-spacing: 0.4px;
+
+    @include md {
+      display: none;
+    }
+  }
+
+  &__avatar {
+    width: $spacing-xl;
+    height: $spacing-xl;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.settings {
+  width: $spacing-xl;
+  height: $spacing-xl;
+  padding: $spacing-xs + 2px;
+  border: 1px solid $color-border-input;
+  border-radius: $border-radius-md;
+  @include flex-align-center;
+  background: transparent;
+  cursor: pointer;
+
+  img {
+    width: $spacing-lg - 4px;
+    height: $spacing-lg - 4px;
+  }
+}

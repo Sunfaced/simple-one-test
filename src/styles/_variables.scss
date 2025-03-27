@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+//Цвета 
+$color-background-input: #FCFCFD;
+$color-border-input: #D5D8DD;
+$color-text: #2E3238;
+$color-text-neutral: #fff;
+$color-text-mask: #ABB1BA;
+$color-button-primary: #0078CF;
+$color-badge: #E5F4FF;
+$color-border-badge: #99D5FF;
+
+//Шрифты
+$font-family-main: 'Open Sans', sans-serif;
+$font-family-title: 'Montserrat', sans-serif;
+$font-weight-bold: 700;
+$font-weight-semi-bold: 600;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+
+// Размеры шрифтов
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+
+// Высота строки
+$line-height-sm: 1.25rem;
+$line-height-tg: 2rem;
+
+// Размеры контейнера
+$container-width: 1940px;
+$container-padding: 10px;
+
+// Отступы
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// Радиусы скругления
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+
+//Брейкпоинты
+$breakpoint-xl: 1200px;
+$breakpoint-lg: 991px;
+$breakpoint-md: 767px;
+$breakpoint-sm: 576px;
+$breakpoint-xs: 320px;

@@ -1,0 +1,238 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.main {
+  font-family: $font-family-main;
+  width: 100%;
+  max-width: 1584px;
+  background: $color-text-neutral;
+  overflow: auto;
+
+  &__content {
+    width: 100%;
+
+    @include lg {
+      border-left: 1px solid $color-border-input;
+    }
+  }
+
+  &__header {
+    padding: $spacing-md 0 $spacing-md $spacing-md;
+
+    @include md {
+      padding-right: $spacing-md;
+    }
+  }  
+  
+  &__header_sticky {
+    background-color: $color-text-neutral;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  &__toolbar {
+    min-height: $spacing-xl;
+    display: flex;
+    align-items: center;
+
+    @include xl {
+      justify-content: space-between;
+    }
+
+    &_left {
+      display: flex;
+      align-items: center;
+      gap: $spacing-md;
+
+      @include md {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &_right {
+      display: flex;
+      align-items: center;
+      gap: $spacing-xs;
+
+      @include md {
+        display: none;
+      }
+    }
+  }
+
+  &__buttons_group {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+  }
+
+  &__title {
+    font-family: $font-family-title;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-regular;
+    color: $color-text;
+  }
+}
+
+.button {
+  min-width: 80px;
+  border-radius: $border-radius-sm;
+  font-size: $font-size-sm;
+  font-family: $font-family-main;
+  cursor: pointer;
+  border: 1px solid $color-border-input;
+  background: $color-text-neutral;
+  height: $spacing-xl;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &_primary {
+    background: $color-button-primary;
+    color: $color-text-neutral;
+    border-color: $color-button-primary;
+    min-width: 101px;
+  }
+
+  &_secondary {
+    min-width: 163px;
+  }
+}
+
+.ticket {
+  padding: 0 $spacing-md 0 $spacing-md;
+  background: $color-text-neutral;
+  width: 100%;
+  overflow: hidden;
+
+  &__header {
+    padding-bottom: $spacing-lg;
+    width: 100%;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-family-title;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semi-bold;
+    color: $color-text;
+    line-height: $line-height-tg;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: normal;
+    width: 100%;
+    max-width: 1552px;
+
+    @include md {
+      font-size: $font-size-lg;
+      line-height: $spacing-lg;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    min-width: 0;
+    margin-bottom: $spacing-md;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  &__fields {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__block {
+    display: flex;
+    gap: $spacing-md;
+    width: 100%;
+
+    > * {
+      flex: 1;
+    }
+
+    @include lg {
+      flex-direction: column;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: $spacing-md;
+  }
+
+  &__meta_row {
+    display: flex;
+    gap: $spacing-lg;
+    width: 100%;
+    min-width: 0;
+
+    @include md {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    > * {
+      flex: 1;
+    }
+  }
+
+  &__meta_field {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: $spacing-sm;
+
+    > * {
+      &:first-child {
+        flex: 1;
+      }
+    }
+  }
+
+  &__calendar_button {
+    @include action-button;
+  }
+}
+
+.form-field {
+  &__input {
+    @include form-input;
+    flex: 1;
+    min-width: 0;
+    padding: 0 $spacing-sm + 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__input_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    border: 1px solid $color-border-input;
+    border-radius: $border-radius-sm;
+    background-color: $color-background-input;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+    font-weight: $font-weight-regular;
+    color: $color-text;
+  }
+}

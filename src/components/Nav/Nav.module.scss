@@ -1,0 +1,182 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.nav {
+  height: 100vh;
+  background: $color-text-neutral;
+  font-family: $font-family-main;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+
+  @include md {
+    display: none;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__side {
+    width: 56px;
+    padding-top: $spacing-md;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-xl;
+    border-right: 1px solid $color-border-input;
+
+    @include lg {
+      border: none;
+    }
+  }
+
+  &__main {
+    width: 280px;
+    height: 100vh;
+    padding: $spacing-md 0;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    border-right: 1px solid $color-border-input;
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__toggle,
+  &__favorite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: $spacing-sm;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: $border-radius-sm;
+
+    &:hover {
+      background: $color-background-input;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    gap: $spacing-sm;
+  }
+
+  &__pin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $spacing-xl;
+    height: $spacing-xl;
+    padding: $spacing-sm;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: $border-radius-sm;
+    border: 1px solid $color-border-input;
+
+    &:hover {
+      background: $color-background-input;
+    }
+
+    img {
+      width: $spacing-md;
+      height: $spacing-md;
+    }
+  }
+}
+
+.nav__controls {
+  padding: 0 $spacing-md $spacing-md $spacing-md;
+  border-bottom: 1px solid $color-border-input;
+}
+
+.search {
+  position: relative;
+  flex-grow: 1;
+
+  &__input {
+    width: 100%;
+    height: $spacing-xl;
+    padding: $spacing-sm $spacing-xl $spacing-sm $spacing-sm;
+    border: 1px solid $color-border-input;
+    border-radius: $border-radius-sm;
+    font-size: $font-size-sm;
+
+    &::placeholder {
+      color: $color-text-mask;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-button-primary;
+    }
+  }
+
+  &__filter {
+    position: absolute;
+    right: $spacing-xs;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: $spacing-xs;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: $border-radius-sm;
+
+    &:hover {
+      background: $color-background-input;
+    }
+
+    img {
+      width: $spacing-md;
+      height: $spacing-md;
+    }
+  }
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+  background-color: $color-background-input;
+
+  &__item {
+    width: 100%;
+    padding-left: $spacing-md;
+  }
+
+  &__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    font-size: $font-size-sm;
+    color: $color-text;
+  }
+
+  &__arrow {
+    flex-shrink: 0;
+    padding-right: $spacing-sm;
+  }
+
+  &__text {
+    letter-spacing: 0.4px;
+  }
+}

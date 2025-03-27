@@ -1,0 +1,76 @@
+@use "variables" as *;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin form-input {
+  height: $spacing-xl;
+  background: $color-background-input;
+  border: 1px solid $color-border-input;
+  border-radius: $border-radius-sm;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+  font-weight: $font-weight-regular;
+}
+
+@mixin action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $spacing-xl;
+  height: $spacing-xl;
+  background: transparent;
+  border: 1px solid $color-border-input;
+  border-radius: $border-radius-sm;
+  padding: 0;
+  cursor: pointer;
+  
+  img {
+    width: $spacing-lg - 4px;
+    height: $spacing-lg - 4px;
+  }
+}
+
+@mixin xl {
+  @media (max-width: #{$breakpoint-xl}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}
+
+@mixin range-lg-md {
+  @media (max-width: $breakpoint-lg) and (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: #{$breakpoint-md}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: #{$breakpoint-sm}) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width: #{$breakpoint-xs}) {
+    @content;
+  }
+}

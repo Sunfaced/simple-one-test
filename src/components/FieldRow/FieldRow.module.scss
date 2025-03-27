@@ -1,0 +1,128 @@
+@use "../../styles/variables" as *;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  // margin-bottom: 16px;
+
+  &__label {
+    font-weight: $font-weight-semi-bold;
+    font-size: $font-size-sm;
+    line-height: 20px;
+    color: #2E3238;
+    margin-bottom: 8px;
+  }
+
+  &__row {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__input_wrapper {
+    display: flex;
+    
+    flex: 1;
+    min-width: 0;
+    border: 1px solid $color-border-input;
+    border-radius: $border-radius-sm;
+    background-color: $color-background-input;font-size: 14px;
+    line-height: 20px;
+    font-weight: $font-weight-regular;
+    color: $color-text;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 8px;
+    margin: 4px;
+    background-color: $color-badge;
+    border: 1px solid $color-border-badge;
+    border-radius: $border-radius-sm;
+    font-family: $font-family-main;
+    font-size: $font-size-sm;
+    color: $color-text;
+    width: auto;
+    min-width: 0;
+
+    > span {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    &_delete {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin-left: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__clear_container {
+    display: flex;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 4px;
+    align-self: stretch;
+  }
+
+  &__clear_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__external_buttons {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__action_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: 1px solid $color-border-input;
+    border-radius: $border-radius-sm;
+    padding: 0;
+    cursor: pointer;
+    
+
+    img {
+      width: 20px;
+      height: 20px;
+      color: #2E3238;
+    }
+  }
+} 
